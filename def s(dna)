@@ -1,5 +1,3 @@
-dna = "ACGTTCCGGAAGTCGA"
-
 def s(dna):
     d = dict()
     for i in dna:
@@ -10,3 +8,24 @@ def s(dna):
         print(d)
 
 s(dna)
+
+def dna2rna(dna):
+    rna = ""
+    for char in dna:
+        if char == "T":
+            rna += "U"
+        else:
+            rna += char
+    return rna
+
+print(dna2rna(dna))
+
+def reverse_complement(dna):
+    dna = dna[::-1]
+    revcomdna = ""
+    complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
+    for char in (dna):
+        revcomdna += complements[char]
+    return revcomdna
+
+print(reverse_complement(dna))
