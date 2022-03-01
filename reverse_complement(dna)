@@ -1,0 +1,9 @@
+def reverse_complement(dna):
+    dna = dna[::-1]
+    revcomdna = ""
+    complements = {"A": "T", "T": "A", "C": "G", "G": "C"}
+    for idx in range(len(dna)):
+        revcomdna += complements[dna[idx]]
+    return revcomdna
+
+print(reverse_complement(dna))
